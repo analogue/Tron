@@ -18,6 +18,7 @@ The Name of the job is used in :command:`tronview` and :command:`tronctl`. Here 
   jobs:
     "foo":
       "schedule": ...
+      "node": ...
       "command": ...
       "actions":
         "run_first":
@@ -111,7 +112,7 @@ Optional Fields
     If a job run is still running when the next job run is to be scheduled,
     add the next run to a queue if this is **True**. Otherwise, cancel
     the job run. Note that if the scheduler used for this job is
-    not defined to queue overlapping then this setting is ignored.
+    not defined **allow_overlap** then this setting is ignored.
 
 **allow_overlap** (default **False**)
     If **True** new job runs will start even if the previous run is still running.
